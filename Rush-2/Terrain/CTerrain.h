@@ -1,35 +1,63 @@
 #pragma once
 #include "CSommetTerrain.h"
+#include "d3dx11effect.h"
+#include "Objet3D.h"
+
 #include <vector>
 #include <DirectXMath.h>
 using namespace DirectX;
 using namespace std;
 
-class CTerrain
+namespace PM3D
 {
-	uint8_t* rgb_image;
-	int dx, dy;
-	vector<CSommetTerrain> sommets;
-	int nbSommets;
-	int nbPolygones;
-	unsigned int* pIndices;
-	vector<XMFLOAT3> normales;
-public :
-	void LireFichierHeightmap(const char* s);
+	class CDispositifD3D11;
 
-	void ConstruireTerrain(float echelleXY, float echelleZ);
+	class CTerrain : public CObjet3D
+	{
+		uint8_t* rgb_image;
+		int dx, dy;
+		vector<XMFLOAT3> sommets;
+		int nbSommets;
+		int nbPolygones;
+		unsigned int* pIndices;
+		vector<XMFLOAT3> normales;
 
-	void ConstruireIndex();
+		void LireFichierHeightmap(const char* s);
 
-	void CalculerNormales();
+		void ConstruireTerrain(float echelleXY, float echelleZ);
 
-	void EnregistrerTout(const char* s);
+		void ConstruireIndex();
 
-	void RecupererTout(const char* s);
-	//CTerrain(const char* s);
+		void CalculerNormales();
 
-private :
-	XMFLOAT3 CalculNormale(int x, int y);
-	XMVECTOR ObtenirPosition(int x, int y);
-};
+	public:
+		CTerrain(const char* file, float scaleXY, float scaleZ, CDispositifD3D11* pDispositif);
+		virtual ~CTerrain();
 
+		virtual void Anime(float tempsEcoule) override;
+		virtual void Draw() override;
+
+	private:
+		XMFLOAT3 CalculNormale(int x, int y);
+		XMVECTOR ObtenirPosition(int x, int y);
+
+		void InitEffet();
+
+		CDispositifD3D11* pDispositif;
+
+		ID3D11Buffer* pVertexBuffer;
+		ID3D11Buffer* pIndexBuffer;
+
+		// Définitions des valeurs d'animation
+		ID3D11Buffer* pConstantBuffer;
+		XMMATRIX matWorld;
+		float rotation;
+
+		// Pour les effets
+		ID3DX11Effect* pEffet;
+		ID3DX11EffectTechnique* pTechnique;
+		ID3DX11EffectPass* pPasse;
+		ID3D11InputLayout* pVertexLayout;
+	};
+
+} // namespace PM3D

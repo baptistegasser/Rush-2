@@ -7,6 +7,7 @@
 #include "Bloc.h"
 #include "BlocEffet1.h"
 #include "DIManipulateur.h"
+#include "Terrain/CTerrain.h"
 
 namespace PM3D
 {
@@ -193,7 +194,8 @@ namespace PM3D
 		bool InitObjets()
 		{
 			// Puis, il est ajouté à la scène
-			ListeScene.emplace_back(std::make_unique<CBlocEffet1>(2.0f, 2.0f, 2.0f, pDispositif));
+			//ListeScene.emplace_back(std::make_unique<CBlocEffet1>(2.0f, 2.0f, 2.0f, pDispositif));
+			ListeScene.emplace_back(std::make_unique<CTerrain>("DunesSample.jpg", 5.0f, 2.0f, pDispositif));
 
 			return true;
 		}

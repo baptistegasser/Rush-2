@@ -210,7 +210,6 @@
     </ClCompile>
     <ClCompile Include="Terrain\CSommetTerrain.cpp" />
     <ClCompile Include="Terrain\CTerrain.cpp" />
-    <ClCompile Include="Terrain\Rush1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bloc.h" />
