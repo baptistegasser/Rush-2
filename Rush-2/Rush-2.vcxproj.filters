@@ -16,6 +16,12 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{9d854d77-6622-457e-b6e6-7ac96d751df3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Terrain">
+      <UniqueIdentifier>{13d33061-e07c-46ea-b379-bda3b27321c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Terrain">
+      <UniqueIdentifier>{1015c2b4-20f5-47de-8f99-bda515b4f3f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Moteur.cpp">
@@ -50,6 +56,15 @@
     </ClCompile>
     <ClCompile Include="dispositif.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\CSommetTerrain.cpp">
+      <Filter>Fichiers sources\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\CTerrain.cpp">
+      <Filter>Fichiers sources\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\Rush1.cpp">
+      <Filter>Fichiers sources\Terrain</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +109,15 @@
     </ClInclude>
     <ClInclude Include="Horloge.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\CSommetTerrain.h">
+      <Filter>Fichiers d%27en-tête\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\CTerrain.h">
+      <Filter>Fichiers d%27en-tête\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\stb_image.h">
+      <Filter>Fichiers d%27en-tête\Terrain</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
