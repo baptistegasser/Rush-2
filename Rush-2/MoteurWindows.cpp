@@ -97,6 +97,9 @@ namespace PM3D
 		InitAppInstance();
 		Show();
 
+		// Initialisation de DirectInput
+		GestionnaireDeSaisie.Init(hAppInstance, hMainWnd);
+
 		return 0;
 	}
 

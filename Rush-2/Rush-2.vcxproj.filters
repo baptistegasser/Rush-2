@@ -66,6 +66,9 @@
     <ClCompile Include="Terrain\Rush1.cpp">
       <Filter>Fichiers sources\Terrain</Filter>
     </ClCompile>
+    <ClCompile Include="DIManipulateur.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Moteur.h">
@@ -118,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="Terrain\stb_image.h">
       <Filter>Fichiers d%27en-tête\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="DIManipulateur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

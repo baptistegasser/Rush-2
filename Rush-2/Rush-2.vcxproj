@@ -142,7 +142,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <AdditionalDependencies>dxguid.lib;d3d11.lib;d3dcompiler.lib;DXGI.lib;Effects11d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>dinput8.lib;dxguid.lib;d3d11.lib;d3dcompiler.lib;DXGI.lib;Effects11d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
@@ -187,12 +187,13 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <AdditionalDependencies>dxguid.lib;d3d11.lib;d3dcompiler.lib;DXGI.lib;Effects11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>dinput8.lib;dxguid.lib;d3d11.lib;d3dcompiler.lib;DXGI.lib;Effects11.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bloc.cpp" />
     <ClCompile Include="BlocEffet1.cpp" />
+    <ClCompile Include="DIManipulateur.cpp" />
     <ClCompile Include="dispositif.cpp" />
     <ClCompile Include="dispositifD3D11.cpp" />
     <ClCompile Include="Horloge.cpp" />
@@ -214,6 +215,7 @@
   <ItemGroup>
     <ClInclude Include="Bloc.h" />
     <ClInclude Include="BlocEffet1.h" />
+    <ClInclude Include="DIManipulateur.h" />
     <ClInclude Include="dispositif.h" />
     <ClInclude Include="dispositifD3D11.h" />
     <ClInclude Include="Horloge.h" />

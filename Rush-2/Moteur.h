@@ -6,6 +6,7 @@
 #include "Objet3D.h"
 #include "Bloc.h"
 #include "BlocEffet1.h"
+#include "DIManipulateur.h"
 
 namespace PM3D
 {
@@ -95,6 +96,8 @@ namespace PM3D
 		const XMMATRIX& GetMatView() const { return m_MatView; }
 		const XMMATRIX& GetMatProj() const { return m_MatProj; }
 		const XMMATRIX& GetMatViewProj() const { return m_MatViewProj; }
+
+		CDIManipulateur& GetGestionnaireDeSaisie() { return GestionnaireDeSaisie; }
 
 	protected:
 
@@ -197,6 +200,11 @@ namespace PM3D
 
 		bool AnimeScene(float tempsEcoule)
 		{
+			// Prendre en note le status du clavier
+			GestionnaireDeSaisie.StatutClavier();
+			// Prendre en note l’état de la souris
+			GestionnaireDeSaisie.SaisirEtatSouris();
+
 			for (auto& object3D : ListeScene)
 			{
 				object3D->Anime(tempsEcoule);
@@ -220,6 +228,9 @@ namespace PM3D
 		XMMATRIX m_MatView;
 		XMMATRIX m_MatProj;
 		XMMATRIX m_MatViewProj;
+
+		// Input
+		CDIManipulateur GestionnaireDeSaisie;
 	};
 
 } // namespace PM3D
