@@ -208,8 +208,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Terrain\CSommetTerrain.cpp" />
-    <ClCompile Include="Terrain\CTerrain.cpp" />
+    <ClCompile Include="Terrain\Image.cpp" />
+    <ClCompile Include="Terrain\Terrain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bloc.h" />
@@ -226,10 +226,11 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="sommetbloc.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Terrain\CSommetTerrain.h" />
-    <ClInclude Include="Terrain\CTerrain.h" />
-    <ClInclude Include="Terrain\stb_image.h" />
+    <ClInclude Include="Terrain\Image.h" />
+    <ClInclude Include="Terrain\Terrain.h" />
     <ClInclude Include="util.h" />
+    <ClInclude Include="util\stb_image.h" />
+    <ClInclude Include="util\types.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="MiniPhong.phl">

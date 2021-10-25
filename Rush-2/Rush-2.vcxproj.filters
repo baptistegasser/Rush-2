@@ -16,11 +16,14 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{9d854d77-6622-457e-b6e6-7ac96d751df3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Terrain">
-      <UniqueIdentifier>{13d33061-e07c-46ea-b379-bda3b27321c2}</UniqueIdentifier>
+    <Filter Include="Fichiers d%27en-tête\util">
+      <UniqueIdentifier>{189f7121-93e6-4c9f-be52-4582891859d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers d%27en-tête\Terrain">
-      <UniqueIdentifier>{1015c2b4-20f5-47de-8f99-bda515b4f3f7}</UniqueIdentifier>
+      <UniqueIdentifier>{fb5c0c5a-af1e-4595-99d3-d83a202c5bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Terrain">
+      <UniqueIdentifier>{02a897f0-ce2a-47b8-aad8-9251cb67b281}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,14 +60,14 @@
     <ClCompile Include="dispositif.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Terrain\CSommetTerrain.cpp">
-      <Filter>Fichiers sources\Terrain</Filter>
-    </ClCompile>
-    <ClCompile Include="Terrain\CTerrain.cpp">
-      <Filter>Fichiers sources\Terrain</Filter>
-    </ClCompile>
     <ClCompile Include="DIManipulateur.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\Image.cpp">
+      <Filter>Fichiers sources\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\Terrain.cpp">
+      <Filter>Fichiers sources\Terrain</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,17 +113,20 @@
     <ClInclude Include="Horloge.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Terrain\CSommetTerrain.h">
-      <Filter>Fichiers d%27en-tête\Terrain</Filter>
-    </ClInclude>
-    <ClInclude Include="Terrain\CTerrain.h">
-      <Filter>Fichiers d%27en-tête\Terrain</Filter>
-    </ClInclude>
-    <ClInclude Include="Terrain\stb_image.h">
-      <Filter>Fichiers d%27en-tête\Terrain</Filter>
-    </ClInclude>
     <ClInclude Include="DIManipulateur.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="util\types.h">
+      <Filter>Fichiers d%27en-tête\util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\stb_image.h">
+      <Filter>Fichiers d%27en-tête\util</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\Image.h">
+      <Filter>Fichiers d%27en-tête\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\Terrain.h">
+      <Filter>Fichiers d%27en-tête\Terrain</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

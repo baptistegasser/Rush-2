@@ -15,7 +15,6 @@ namespace PM3D
 		static UINT numElements;
 		static D3D11_INPUT_ELEMENT_DESC layout[];
 
-	protected:
 		XMFLOAT3 m_Position;
 		XMFLOAT3 m_Normal;
 	};
